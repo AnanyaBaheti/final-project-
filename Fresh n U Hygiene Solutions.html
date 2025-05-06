@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<!-- saved from url=(0060)file:///C:/Users/bahet/OneDrive/Desktop/website%20anna.html# -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fresh n U Hygiene Solutions</title>
+  <style>
+    :root {
+      --main-color: #72D1C6; /* Fresh Mint Green */
+      --accent-color: #FFB6C1; /* Light Pink */
+      --bg-color: #F9F9F9; /* Light Background */
+      --text-color: #333; /* Dark Text */
+      --highlight-color: #A3D8F4; /* Light Blue */
+      --card-bg-color: #FFFFFF; /* White for cards */
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+    }
+
+    header {
+      background-color: var(--main-color);
+      color: white;
+      text-align: center;
+      padding: 1.5em 0;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 600;
+      transition: 0.3s ease;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* Sections */
+    section {
+      padding: 50px 20px;
+      margin: 20px 0;
+      text-align: center;
+      display: none;
+    }
+
+    section.active {
+      display: block;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #e0f7ff, #fff1f5);
+      padding: 100px 20px;
+      border-radius: 10px;
+      margin-bottom: 30px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .hero h2 {
+      font-size: 3em;
+      color: var(--main-color);
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.2em;
+      color: #555;
+      margin-bottom: 30px;
+    }
+
+    button {
+      padding: 15px 30px;
+      background-color: var(--accent-color);
+      color: white;
+      border: none;
+      border-radius: 50px;
+      font-size: 1.2em;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #f57c7c;
+      transform: scale(1.05);
+    }
+
+    /* Featured Products Section */
+    #featured-products {
+      background-color: var(--bg-color);
+      padding: 50px 20px;
+    }
+
+    #featured-products h2 {
+      font-size: 2.5em;
+      color: var(--highlight-color);
+      margin-bottom: 20px;
+    }
+
+    .product-carousel {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .product-item {
+      background-color: var(--card-bg-color);
+      padding: 20px;
+      width: 250px;
+      border-radius: 12px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .product-item:hover {
+      transform: translateY(-10px);
+    }
+
+    .product-item img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+
+    .product-item h3 {
+      font-size: 1.3em;
+      color: var(--main-color);
+      margin-top: 10px;
+    }
+
+    /* About Section */
+    #about {
+      background-color: var(--bg-color);
+      padding: 50px 20px;
+    }
+
+    #about h2 {
+      font-size: 2.5em;
+      color: var(--highlight-color);
+      margin-bottom: 20px;
+    }
+
+    .about-box {
+      background-color: var(--card-bg-color);
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      flex: 1;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .about-box:hover {
+      transform: translateY(-10px);
+    }
+
+    .about-container {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .about-box h3 {
+      font-size: 1.6em;
+      color: var(--main-color);
+      margin-bottom: 15px;
+    }
+
+    .about-box p {
+      font-size: 1.1em;
+      color: #555;
+    }
+
+    /* Testimonials Section */
+    #testimonials {
+      background-color: #F1F1F1;
+      padding: 50px 20px;
+    }
+
+    #testimonials h2 {
+      font-size: 2.5em;
+      margin-bottom: 40px;
+      color: var(--highlight-color);
+    }
+
+    .testimonial-container {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .testimonial {
+      background-color: var(--card-bg-color);
+      padding: 20px;
+      width: 250px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      font-style: italic;
+    }
+
+    .testimonial h4 {
+      margin-top: 10px;
+      font-weight: 600;
+      color: var(--main-color);
+    }
+
+    /* Contact Section */
+    #contact {
+      background-color: var(--bg-color);
+      padding: 50px 20px;
+    }
+
+    #contact h2 {
+      font-size: 2.5em;
+      color: var(--highlight-color);
+      margin-bottom: 20px;
+    }
+
+    form {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 15px;
+      margin: 10px 0;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+      font-size: 1em;
+    }
+
+    form button {
+      padding: 15px 30px;
+      background-color: var(--main-color);
+      color: white;
+      border: none;
+      border-radius: 50px;
+      font-size: 1.2em;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: 0.3s;
+    }
+
+    form button:hover {
+      background-color: #66c2a6;
+    }
+
+    /* Footer */
+    
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>🧼 Fresh n U Hygiene Solutions</h1>
+    <nav>
+      <a href="file:///C:/Users/bahet/OneDrive/Desktop/website%20anna.html#" onclick="showPage(&#39;home&#39;)">Home</a>
+      <a href="file:///C:/Users/bahet/OneDrive/Desktop/website%20anna.html#" onclick="showPage(&#39;about&#39;)">About</a>
+      <a href="file:///C:/Users/bahet/OneDrive/Desktop/website%20anna.html#" onclick="showPage(&#39;products&#39;)">Products</a>
+      <a href="file:///C:/Users/bahet/OneDrive/Desktop/website%20anna.html#" onclick="showPage(&#39;contact&#39;)">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Home Section -->
+  <section id="home" class="active">
+    <div class="hero">
+      <h2>Safe &amp; Quality Hygiene Solutions</h2>
+      <p>Wholesale hygiene products for babies, adults, and women. Providing clean and comfortable solutions for all your hygiene needs.</p>
+<p style="max-width: 900px; margin: 30px auto; font-size: 1.2em; text-align: center; font-family: &#39;Segoe UI&#39;, sans-serif; line-height: 1.6; color: #444; font-weight: 500;">
+  <em>Hygiene is a basic human necessity — not a luxury.</em> From newborn care to elderly support and women's health, our products like <strong>baby diapers</strong>, <strong>adult diapers</strong>, <strong>sanitary pads</strong>, and <strong>wipes</strong> are designed to ensure daily comfort, protection, and dignity. At <strong>Fresh n U Hygiene Solutions</strong>, we bridge the gap between affordability and quality by delivering essential hygiene solutions for families and businesses alike.
+</p>
+      <button onclick="showPage(&#39;products&#39;)">Explore Products</button>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="">
+    <h2>About Us</h2>
+    <div class="about-container">
+      <div class="about-box">
+        <h3>Our Mission</h3>
+        <p><strong>Fresh n U Hygiene Solutions</strong> is committed to providing businesses with high-quality hygiene products. Our mission is to ensure that every product we offer is safe, affordable, and eco-friendly.</p>
+      </div>
+      <div class="about-box">
+        <h3>Quality Assurance</h3>
+        <p>We source only the best raw materials for manufacturing and partnering with trusted brands to bring you top-notch products. Every product undergoes rigorous quality control checks.</p>
+      </div>
+      <div class="about-box">
+        <h3>Eco-Conscious Approach</h3>
+        <p>We believe in sustainability. Our products are designed with the environment in mind, offering biodegradable options like baby wipes and eco-friendly packaging for diapers.</p>
+      </div>
+    </div>
+  </section>
+<!-- About Section -->
+<section id="about">
+  <h2>About Us</h2>
+  
+  <p style="max-width: 800px; margin: 20px auto; font-size: 1.1em;">
+    At <strong>Fresh n U Hygiene Solutions</strong>, our mission is to provide high-quality, affordable hygiene products for babies, adults, and women — focusing on safety, comfort, and sustainability. We serve on a B2B wholesale basis, helping retailers, hospitals, and other businesses maintain hygiene standards with ease and trust.
+  </p>
+
+  <div class="about-container">
+    <div class="about-box">
+      <h3>Our Mission</h3>
+      <p><strong>Fresh n U Hygiene Solutions</strong> is committed to providing businesses with high-quality hygiene products. Our mission is to ensure that every product we offer is safe, affordable, and eco-friendly.</p>
+    </div>
+    <div class="about-box">
+      <h3>Quality Assurance</h3>
+      <p>We source only the best raw materials for manufacturing and partner with trusted brands to bring you top-notch products. Every product undergoes rigorous quality control checks.</p>
+    </div>
+    <div class="about-box">
+      <h3>Eco-Conscious Approach</h3>
+      <p>We believe in sustainability. Our products are designed with the environment in mind, offering biodegradable options like baby wipes and eco-friendly packaging for diapers.</p>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Products Section -->
+  <section id="products" class="">
+    <h2>Our Products</h2>
+    <div class="product-carousel">
+      <div class="product-item">
+        <img src="./Fresh n U Hygiene Solutions_files/IMG_7707.jpg" alt="Baby hug range">
+        <h3>Biodegradable Baby Wipes</h3>
+      </div>
+      <div class="product-item">
+        <img src="./Fresh n U Hygiene Solutions_files/IMG_7706 (1).jpg" alt="Diapers">
+        <h3>Ultra-soft Diapers</h3>
+      </div>
+      <div class="product-item">
+        <img src="./Fresh n U Hygiene Solutions_files/IMG_7709.jpg" alt="Adult diapers">
+        <h3>Sanitary Pads</h3>
+      </div>
+      <div class="product-item">
+        <img src="./Fresh n U Hygiene Solutions_files/IMG_7708.jpg" alt="Changing Mat">
+        <h3>Portable Changing Mats</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+<section id="contact" class="">
+  <h2>Contact Us</h2>
+  
+  <p><strong>📍 Address:</strong> 112 Bm Tower, Sapna Sangeeta, Indore, Madhya Pradesh</p>
+  <p><strong>📞 Phone:</strong> +91 9644999997</p>
+  <p><strong>✉️ Email:</strong> <a href="mailto:Shivamhealthandhygiene.trading@gmail.com">Shivamhealthandhygiene.trading@gmail.com</a></p>
+
+  <form onsubmit="submitForm(event)">
+    <label for="name">Name:</label>
+    <input type="text" id="name" required="">
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" required="">
+
+    <label for="message"> Place order:</label>
+    <textarea id="message" rows="5" required=""></textarea>
+
+    <button type="submit">Send the details</button>
+  </form>
+</section>
+  <!-- Footer -->
+  
+
+  <!-- JavaScript -->
+  <script>
+    function showPage(pageId) {
+      const sections = document.querySelectorAll("section");
+      sections.forEach(section => section.classList.remove("active"));
+      document.getElementById(pageId).classList.add("active");
+    }
+
+    function submitForm(event) {
+      event.preventDefault();
+      const name = document.getElementById("name").value;
+      alert("Thank you, " + name + "! We’ll get back to you soon.");
+      event.target.reset();
+    }
+  </script>
+
+
+
+</body></html>
